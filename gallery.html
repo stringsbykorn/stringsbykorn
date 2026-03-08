@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — StringsByKorn</title>
+  <meta name="description" content="Portfolio of lacrosse stringing work by StringsByKorn — mesh pockets, custom patterns, and traditional builds. Follow @stringsbykorn on Instagram." />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .revealed { opacity: 1; transform: none; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* Filter tabs */
+    .filter-tabs {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-tab {
+      padding: 0.45rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.04em;
+    }
+    .filter-tab:hover,
+    .filter-tab.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
+
+    /* Gallery caption overlay */
+    .gallery-item .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(10,14,26,0.9), transparent);
+      padding: 1.25rem 0.85rem 0.75rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+    .gallery-caption span {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+      display: block;
+    }
+    .gallery-caption em {
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strings<span>By</span>Korn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Book / Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services &amp; Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book / Contact</a>
+    <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:.5rem;">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <p style="text-transform:uppercase;font-size:.8rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem;">Portfolio</p>
+      <h1>My <span class="accent">Work</span></h1>
+      <p>Every head strung with attention to detail. Browse the portfolio and see the quality for yourself.</p>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       GALLERY
+  ====================================================== -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs reveal" id="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="mesh">Mesh</button>
+        <button class="filter-tab" data-filter="custom">Custom Patterns</button>
+        <button class="filter-tab" data-filter="traditional">Traditional</button>
+      </div>
+
+      <!-- Gallery grid -->
+      <div class="gallery-grid" id="gallery-grid">
+
+        <!-- Each item has data-category for filtering -->
+        <!-- Replace src="images/..." with your actual photo files -->
+        <!-- Placeholders shown until real photos are added -->
+
+        <div class="gallery-item reveal" data-category="mesh">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:36px;height:36px;color:var(--border)">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Add your photo</span>
+            <code style="font-size:.7rem;">images/gallery-1.jpg</code>
+          </div>
+          <div class="gallery-caption">
+            <span>Mid Pocket — White Mesh</span>
+            <em>Mesh &bull; STX Duel III</em>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="custom">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:36px;height:36px;color:var(--border)">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Add your photo</span>
+            <code style="font-size:.7rem;">images/gallery-2.jpg</code>
+          </div>
+          <div class="gallery-caption">
+            <span>Orange &amp; Black Custom</span>
+            <em>Custom Pattern &bull; ECD Mirage</em>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="traditional">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:36px;height:36px;color:var(--border)">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Add your photo</span>
+            <code style="font-size:.7rem;">images/gallery-3.jpg</code>
+          </div>
+          <div class="gallery-caption">
+            <span>Traditional Low Pocket</span>
+            <em>Traditional &bull; Warrior Burn XP</em>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="mesh">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:36px;height:36px;color:var(--border)">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Add your photo</span>
+            <code style="font-size:.7rem;">images/gallery-4.jpg</code>
+          </div>
+          <div class="gallery-caption">
+            <span>Navy 10-Diamond Mesh</span>
+            <em>Mesh &bull; Maverik Optik 2</em>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="custom">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:36px;height:36px;color:var(--border)">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Add your photo</span>
+            <code style="font-size:.7rem;">images/gallery-5.jpg</code>
+          </div>
+          <div class="gallery-caption">
+            <span>Team Color Custom Build</span>
+            <em>Custom Pattern &bull; StringKing Mark 2V</em>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="mesh">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:36px;height:36px;color:var(--border)">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Add your photo</span>
+            <code style="font-size:.7rem;">images/gallery-6.jpg</code>
+          </div>
+          <div class="gallery-caption">
+            <span>High Pocket — Wax Mesh</span>
+            <em>Mesh &bull; STX Eclipse 2</em>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- How to add photos note -->
+      <div class="note-box reveal" style="margin-top:2rem;">
+        <strong>Adding your photos:</strong> Drop your portfolio images into the <code>images/</code> folder (e.g., <code>gallery-1.jpg</code>), then in each <code>.gallery-item</code> replace the <code>.gallery-placeholder</code> div with an <code>&lt;img src="images/gallery-1.jpg" alt="..."&gt;</code> tag. The lightbox and filter effects will work automatically.
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       INSTAGRAM LINK
+  ====================================================== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="ig-link-box reveal">
+        <h3>See More on Instagram</h3>
+        <p>Follow <strong>@stringsbykorn</strong> for the latest work, behind-the-scenes content, and stringing tips.</p>
+        <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener" class="btn-ig">@stringsbykorn &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="Gallery image" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strings<span class="accent">By</span>Korn</h3>
+          <p>Custom lacrosse stringing by Evan Kornbau. Based in Massachusetts.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book / Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></li>
+            <li><a href="booking.html">Book a Restring</a></li>
+            <li><a href="booking.html#contact">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 StringsByKorn. All rights reserved.</span>
+        <span>Massachusetts &bull; <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Gallery filter
+    const tabs = document.querySelectorAll('.filter-tab');
+    const items = document.querySelectorAll('.gallery-item');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        items.forEach(item => {
+          const show = filter === 'all' || item.dataset.category === filter;
+          item.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    // Lightbox — only activates for items with real <img> tags
+    const lightbox    = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lbClose     = document.getElementById('lightbox-close');
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        if (!img) return; // placeholders don't open lightbox
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

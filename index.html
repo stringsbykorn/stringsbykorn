@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StringsByKorn — Custom Lacrosse Stringing</title>
+  <meta name="description" content="Professional lacrosse head stringing by Evan Kornbau. Custom mesh, traditional pockets, and specialty patterns. Based in Massachusetts." />
+  <meta property="og:title" content="StringsByKorn — Custom Lacrosse Stringing" />
+  <meta property="og:description" content="Custom lacrosse stringing by Evan Kornbau. Book your restring today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .revealed { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================
+       NAV
+  ====================================================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strings<span>By</span>Korn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Book / Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services &amp; Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book / Contact</a>
+    <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:.5rem;">Book Now</a>
+  </div>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Massachusetts &bull; Est. 2024</div>
+        <h1>Custom Lacrosse Stringing<br /><span class="accent">By Evan Kornbau</span></h1>
+        <p>Hand-strung by a dedicated laxer who knows exactly what a great pocket feels like. Mesh, traditional, or custom patterns — built to elevate your game.</p>
+        <div class="hero-btns">
+          <a href="booking.html" class="btn btn-primary">Book a Restring</a>
+          <a href="gallery.html" class="btn btn-outline">View My Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       STATS
+  ====================================================== -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-num" data-count="50" data-suffix="+">0</div>
+          <div class="stat-label">Heads Strung</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="48" data-suffix="hr">0</div>
+          <div class="stat-label">Turnaround</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="5" data-suffix="★">0</div>
+          <div class="stat-label">Avg Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FEATURED WORK
+  ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <p class="section-subtitle" style="text-transform:uppercase;font-size:.8rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem;">Portfolio</p>
+      <h2 class="section-title reveal">Featured Work</h2>
+      <p class="section-subtitle reveal">Every pocket is strung with intention. Here's a taste of what I do.</p>
+
+      <div class="work-grid">
+
+        <div class="work-card reveal">
+          <div class="work-card-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Photo coming soon</span>
+          </div>
+          <div class="work-card-overlay">
+            <span class="work-card-label">Custom Mesh — Orange / Black</span>
+          </div>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-card-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Photo coming soon</span>
+          </div>
+          <div class="work-card-overlay">
+            <span class="work-card-label">Traditional Pocket — Navy</span>
+          </div>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-card-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Photo coming soon</span>
+          </div>
+          <div class="work-card-overlay">
+            <span class="work-card-label">Mid Pocket — 10 Diamond Mesh</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+        <a href="gallery.html" class="btn btn-outline">See Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SERVICES OVERVIEW
+  ====================================================== -->
+  <section class="section" style="background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <p class="section-subtitle" style="text-transform:uppercase;font-size:.8rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem;">What I Offer</p>
+      <h2 class="section-title reveal">Services &amp; Pricing</h2>
+      <p class="section-subtitle reveal">Transparent pricing, no hidden fees. Materials available or bring your own.</p>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Basic Mesh Restring</h3>
+          <p>You supply the head and mesh. I string it to your specs — channel, pocket depth, and throw.</p>
+          <div class="service-price">$25 <span>labor only</span></div>
+        </div>
+
+        <div class="service-card featured reveal">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>Mesh Restring + Materials</h3>
+          <p>Full service — I supply quality mesh, sidewall string, and shooting strings. Pick your color.</p>
+          <div class="service-price">$35–$40 <span>all-in</span></div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3>Custom Pattern</h3>
+          <p>Team colors, specialty diamond patterns, or a unique build. Tell me your vision.</p>
+          <div class="service-price">$35–$45</div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <h3>Traditional Pocket</h3>
+          <p>Classic hard-mesh or leather traditional. Labor-intensive craft — built to last.</p>
+          <div class="service-price">$45–$60</div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Rush Turnaround</h3>
+          <p>Need it back in 24–48 hours? Add the rush option and I'll prioritize your stick.</p>
+          <div class="service-price">+$10 <span>add-on</span></div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3>Mail-In Service</h3>
+          <p>Not local? Ship your head and I'll string it and send it back. Client covers shipping.</p>
+          <div class="service-price">Standard + $5 <span>handling</span></div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;" class="reveal">
+        <a href="services.html" class="btn btn-outline">Full Pricing Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       HOW IT WORKS
+  ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <p class="section-subtitle" style="text-transform:uppercase;font-size:.8rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem;">Process</p>
+      <h2 class="section-title reveal">How It Works</h2>
+      <p class="section-subtitle reveal">Simple, fast, and professional — from booking to game-ready.</p>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h4>Book Online</h4>
+          <p>Choose a time slot via Square Appointments or send a message to coordinate drop-off.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <h4>Drop Off Your Head</h4>
+          <p>Drop it off locally or ship it if you're not nearby. We'll confirm specs and color choices.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <h4>I String It</h4>
+          <p>Strung by hand to your exact specs — channel, pocket depth, shooting strings. Typically done in 24–48 hours.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <h4>Pick Up &amp; Play</h4>
+          <p>Pick up your freshly strung head (or it ships back). Pay via Venmo or Square. Go score.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TESTIMONIALS
+  ====================================================== -->
+  <section class="section" style="background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <p class="section-subtitle" style="text-transform:uppercase;font-size:.8rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem;">Reviews</p>
+      <h2 class="section-title reveal">What Players Say</h2>
+      <p class="section-subtitle reveal">Real feedback from real lacrosse players.</p>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Evan strung my STX Duel III and it came out unreal. Perfect channel, great hold. Exactly what I asked for."</blockquote>
+          <div class="testimonial-author">Jake M.</div>
+          <div class="testimonial-location">Westwood, MA</div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Super fast turnaround — got it back the next day. Pocket feels better than when I bought the head. Will definitely be back."</blockquote>
+          <div class="testimonial-author">Tyler R.</div>
+          <div class="testimonial-location">Medfield, MA</div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Did a custom orange and black pattern for my team. Everyone wanted to know who strung it. Highly recommend."</blockquote>
+          <div class="testimonial-author">Connor P.</div>
+          <div class="testimonial-location">Norwood, MA</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CTA BAND
+  ====================================================== -->
+  <section class="section" style="text-align:center;">
+    <div class="container">
+      <h2 class="reveal">Ready to level up your stick?</h2>
+      <p class="reveal" style="max-width:500px;margin:.75rem auto 2rem;">Book your restring today — spots fill fast, especially before season.</p>
+      <div class="reveal">
+        <a href="booking.html" class="btn btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem;">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strings<span class="accent">By</span>Korn</h3>
+          <p>Custom lacrosse stringing by Evan Kornbau. Based in Massachusetts. Passionate about the craft.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book / Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></li>
+            <li><a href="booking.html">Book a Restring</a></li>
+            <li><a href="booking.html#contact">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 StringsByKorn. All rights reserved.</span>
+        <span>Massachusetts &bull; <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

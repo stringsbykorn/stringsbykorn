@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book / Contact — StringsByKorn</title>
+  <meta name="description" content="Book a lacrosse restring or send a message to StringsByKorn. Online booking via Square Appointments. Based in Massachusetts." />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .revealed { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strings<span>By</span>Korn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Book / Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services &amp; Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book / Contact</a>
+    <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:.5rem;">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <p style="text-transform:uppercase;font-size:.8rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem;">Let's Work Together</p>
+      <h1>Book a <span class="accent">Restring</span></h1>
+      <p>Schedule your drop-off online or send a message. I'll confirm within 24 hours.</p>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       BOOKING SECTION
+  ====================================================== -->
+  <section class="section" id="booking">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- LEFT: Info + Square booking -->
+        <div class="booking-info">
+          <h2>Schedule Your <span class="accent">Drop-Off</span></h2>
+          <p>Use Square Appointments below to grab a time slot. No account needed — just pick a time and fill in your details. I'll confirm by text or email.</p>
+
+          <!-- Square Appointments embed -->
+          <div class="booking-cta-box reveal">
+            <p>Click below to open my live booking calendar and choose a time that works for you.</p>
+            <!--
+              SETUP INSTRUCTIONS:
+              1. Go to squareup.com → Appointments → Share booking page
+              2. Copy your Square booking page URL (e.g. https://square.site/book/XXXXXXXX/stringsbykorn)
+              3. Replace the href below with your actual URL
+              4. Optionally embed the inline widget by replacing this box with the Square embed script
+            -->
+            <a
+              href="https://square.site/book/XXXXXXXX/stringsbykorn"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+              style="font-size:1.05rem;padding:.9rem 2.25rem;"
+            >
+              View Available Times &rarr;
+            </a>
+            <p style="font-size:.8rem;margin-top:.75rem;color:var(--text-muted);">
+              Opens in a new tab &bull; Powered by Square Appointments (free)
+            </p>
+          </div>
+
+          <ul class="info-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span><strong>Location:</strong> Massachusetts (exact address confirmed at booking)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span><strong>Turnaround:</strong> 2–4 days standard &bull; 24–48 hrs with rush add-on (+$10)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+              <span><strong>Payment:</strong> Venmo <em>@stringsbykorn</em> or Square (credit/debit card) at pickup</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+              <span><strong>Mail-in:</strong> Ship your head — I'll string it and ship it back. +$5 handling; client covers shipping both ways.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              <span><strong>Instagram:</strong> <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a> — DMs always open</span>
+            </li>
+          </ul>
+
+          <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener" class="btn btn-outline reveal">
+            DM on Instagram &rarr;
+          </a>
+        </div>
+
+        <!-- RIGHT: Contact form -->
+        <div id="contact">
+          <div class="contact-form reveal">
+            <h3>Send a <span class="accent">Message</span></h3>
+
+            <!--
+              FORMSPREE SETUP:
+              1. Go to formspree.io → create free account → New Form
+              2. Copy your form endpoint (e.g. https://formspree.io/f/XXXXXXXX)
+              3. Replace action="" below with your actual Formspree endpoint
+            -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/XXXXXXXX"
+              method="POST"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="Jake M." required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select a service...</option>
+                  <option value="basic-mesh">Basic Mesh Restring ($25 — you supply mesh)</option>
+                  <option value="mesh-materials">Mesh Restring + Materials ($35–$40)</option>
+                  <option value="custom-pattern">Custom Pattern ($35–$45)</option>
+                  <option value="traditional">Traditional Pocket ($45–$60)</option>
+                  <option value="mail-in">Mail-In Service (standard + $5 handling)</option>
+                  <option value="other">Other / Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="head">Head Brand &amp; Model</label>
+                  <input type="text" id="head" name="head" placeholder="e.g. STX Duel III" />
+                </div>
+                <div class="form-group">
+                  <label for="rush">Rush Turnaround?</label>
+                  <select id="rush" name="rush">
+                    <option value="no">No — standard is fine</option>
+                    <option value="yes">Yes — add rush (+$10)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pocket Specs &amp; Notes</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Pocket depth (low/mid/high), channel preference (clean vs. whippy), color choices, anything specific you want..."
+                ></textarea>
+              </div>
+
+              <!-- Honeypot spam prevention -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;padding:.9rem;">
+                Send Message
+              </button>
+            </form>
+
+            <div class="form-success" id="form-success">
+              Message sent! I'll get back to you within 24 hours. Go check @stringsbykorn on Instagram in the meantime.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       WHAT TO INCLUDE
+  ====================================================== -->
+  <section class="section" style="background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-top:3rem;padding-bottom:3rem;">
+    <div class="container">
+      <h2 class="section-title reveal">When You <span class="accent">Drop Off</span></h2>
+      <p class="section-subtitle reveal">A little info up front means a better final product. Here's what to bring or tell me.</p>
+
+      <div class="steps" style="max-width:900px;margin:0 auto;">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h4>The Head</h4>
+          <p>Bring the unstrung lacrosse head (I'll remove old mesh if needed — no extra charge).</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <h4>Your Specs</h4>
+          <p>Pocket depth, channel preference, mesh brand/color if you have one in mind.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <h4>Your Contact</h4>
+          <p>Phone or email so I can text you when it's ready. That's it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FAQ
+  ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Booking <span class="accent">FAQs</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need an account to book?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              No — Square Appointments lets you book without creating an account. Just pick a time, fill in your name and contact info, and you'll get a confirmation.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if I can't make my scheduled time?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              No worries — just DM me on Instagram or reply to the confirmation email and we'll reschedule. Things come up, I get it.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How should I prepare my head for drop-off?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              You don't have to do anything special — I can remove the old strings myself if it's still strung. Just bring the head and know what you want. If you have specific mesh you'd like me to use, bring that too.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I pay with cash?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, cash is accepted for local drop-off/pickup. For mail-in orders, payment via Venmo or Square (card) is required before the head ships back to you.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strings<span class="accent">By</span>Korn</h3>
+          <p>Custom lacrosse stringing by Evan Kornbau. Based in Massachusetts.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book / Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></li>
+            <li><a href="#booking">Book a Restring</a></li>
+            <li><a href="#contact">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 StringsByKorn. All rights reserved.</span>
+        <span>Massachusetts &bull; <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

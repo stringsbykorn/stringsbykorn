@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services &amp; Pricing — StringsByKorn</title>
+  <meta name="description" content="Lacrosse stringing services and pricing by StringsByKorn. Mesh restrings, custom patterns, traditional pockets, and rush turnaround. Massachusetts." />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .revealed { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strings<span>By</span>Korn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Book / Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services &amp; Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book / Contact</a>
+    <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:.5rem;">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <p style="text-transform:uppercase;font-size:.8rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.5rem;">What I Offer</p>
+      <h1>Services &amp; <span class="accent">Pricing</span></h1>
+      <p>Transparent pricing on every service. No surprises — just a great pocket.</p>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       SERVICE CARDS
+  ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Basic Mesh Restring</h3>
+          <p>You supply the head and your own mesh. I string it to your exact specs — pocket depth, channel, throw preference, and shooting strings.</p>
+          <div class="service-price">$25 <span>labor only</span></div>
+        </div>
+
+        <div class="service-card featured reveal">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>Mesh Restring + Materials</h3>
+          <p>Full-service restring. I provide quality mesh, sidewall string, and shooting strings. Choose your mesh color and pocket style.</p>
+          <div class="service-price">$35–$40 <span>all materials included</span></div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3>Custom Pattern</h3>
+          <p>Themed patterns, team colors, specialty diamond designs, or a completely unique build. DM me your idea and let's make it happen.</p>
+          <div class="service-price">$35–$45 <span>materials included</span></div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <h3>Traditional Pocket</h3>
+          <p>Classic hard-mesh or leather traditional — a labor-intensive pocket built for elite feel and durability. Time-tested construction.</p>
+          <div class="service-price">$45–$60 <span>materials included</span></div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Rush Turnaround</h3>
+          <p>Big game coming up? Add the rush option and your stick jumps to the front of the queue. Done in 24–48 hours, guaranteed.</p>
+          <div class="service-price">+$10 <span>add-on to any service</span></div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3>Mail-In Service</h3>
+          <p>Not local to Massachusetts? Ship your head to me and I'll string it and ship it back. Client pays shipping both ways — I handle the rest.</p>
+          <div class="service-price">Standard + $5 <span>handling fee</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PRICING TABLE
+  ====================================================== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <h2 class="reveal" style="margin-bottom:2rem;">Quick Reference <span class="accent">Price Guide</span></h2>
+
+      <div class="reveal" style="overflow-x:auto;">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+              <th>What's Included</th>
+              <th>Turnaround</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Basic Mesh Restring</strong></td>
+              <td class="price-cell">$25</td>
+              <td>Labor only — you supply mesh &amp; head</td>
+              <td>2–4 days</td>
+            </tr>
+            <tr>
+              <td><strong>Mesh Restring + Materials</strong></td>
+              <td class="price-cell">$35–$40</td>
+              <td>Mesh, sidewall, shooting strings</td>
+              <td>2–4 days</td>
+            </tr>
+            <tr>
+              <td><strong>Custom Pattern</strong></td>
+              <td class="price-cell">$35–$45</td>
+              <td>Custom design, all materials</td>
+              <td>3–5 days</td>
+            </tr>
+            <tr>
+              <td><strong>Traditional Pocket</strong></td>
+              <td class="price-cell">$45–$60</td>
+              <td>All materials, classic construction</td>
+              <td>4–6 days</td>
+            </tr>
+            <tr>
+              <td><strong>Rush Turnaround</strong> <em style="color:var(--text-muted);font-size:.85rem;">(add-on)</em></td>
+              <td class="price-cell">+$10</td>
+              <td>Priority queue, 24–48 hr guaranteed</td>
+              <td>24–48 hrs</td>
+            </tr>
+            <tr>
+              <td><strong>Mail-In Handling</strong> <em style="color:var(--text-muted);font-size:.85rem;">(add-on)</em></td>
+              <td class="price-cell">+$5</td>
+              <td>Secure packaging — client pays shipping</td>
+              <td>Varies</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box reveal">
+        <strong>Note on materials:</strong> Prices shown include materials unless marked "labor only." If you supply your own premium mesh (e.g. Signature, ECD Hero 3), I'll string it at the labor-only rate. Contact me if you have questions about compatibility or specific mesh brands.
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FAQ
+  ====================================================== -->
+  <section class="section" style="background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <h2 class="section-title reveal">Frequently Asked <span class="accent">Questions</span></h2>
+      <p class="section-subtitle reveal">Everything you need to know before booking.</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What information do you need when I book?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              When you book, let me know: the head brand/model, the service you want, your preferred pocket depth (low, mid, high), channel type (whippy vs. clean), any color preferences for mesh/string, and whether you need rush turnaround. The more detail you give, the better I can build exactly what you want.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What heads can you string?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              I can string any standard men's lacrosse head — STX, StringKing, ECD, Maverik, Brine, Warrior, and more. If you have a less common head or a women's head, just reach out and we can discuss compatibility before booking.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I pay?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Payment is collected at pickup (or before shipment for mail-in). I accept Venmo (@stringsbykorn) and Square (credit/debit card). No cash required, though it's accepted locally. Payment is due when you pick up your finished stick.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer any guarantees?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes — if a sidewall string breaks or a shooting string comes undone within 2 weeks of pickup due to a stringing defect (not misuse), I'll re-string that section for free. I stand behind my work.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How far out are you typically booked?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              During the off-season, turnaround is fast — usually 2–4 days. In the spring pre-season (February–March), slots fill up quickly. Book early, especially if you want standard turnaround. Rush add-on is available for urgent requests.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can you match my team's colors exactly?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              I keep an inventory of the most common mesh and string colors. I'll do my best to match your team colors — if I don't have a specific color in stock, I can order it (adds a few days to turnaround). DM me on Instagram if you want to check availability before booking.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;">
+    <div class="container">
+      <h2 class="reveal">Ready to book?</h2>
+      <p class="reveal" style="max-width:480px;margin:.75rem auto 2rem;">Choose your service and grab a time slot. Quick, easy, and your stick will thank you.</p>
+      <a href="booking.html" class="btn btn-primary reveal" style="font-size:1.05rem;padding:.9rem 2.25rem;">Book a Restring</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strings<span class="accent">By</span>Korn</h3>
+          <p>Custom lacrosse stringing by Evan Kornbau. Based in Massachusetts.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book / Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></li>
+            <li><a href="booking.html">Book a Restring</a></li>
+            <li><a href="booking.html#contact">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 StringsByKorn. All rights reserved.</span>
+        <span>Massachusetts &bull; <a href="https://instagram.com/stringsbykorn" target="_blank" rel="noopener">@stringsbykorn</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
